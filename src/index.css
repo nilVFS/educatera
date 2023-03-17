@@ -6,10 +6,15 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ececec;
 }
 
 body {
-  background-color: #ececec;
+  background-color: var(--bg-color);
 }
 
 /* WELCOME PAGE */
@@ -66,6 +71,20 @@ body {
     scale: 3;
     box-shadow: none;
   }
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+
+header ul {
+  display: flex;
+  column-gap: 2rem;
+  list-style: none;
 }
 
 /* MAIN PAGE */
