@@ -3,15 +3,11 @@ import { Link } from "react-router-dom";
 export default function Header() {
     return (
         <header>
-            <h3>EDUCATERA</h3>
+            <Link className="site-logo" to="/">EDUCATERA</Link>
             <nav>
-                <ul>
-                    <li>Главная</li>
-                    <li>Группы</li>
-                    <li>Профиль</li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <Link to="/">Главная</Link>
+                <Link to="#">Группы</Link>
+                <Link to="#">Профиль</Link>
             </nav>
         </header>
     )

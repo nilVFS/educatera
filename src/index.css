@@ -81,10 +81,14 @@ header {
   padding-inline: 2rem;
 }
 
-header ul {
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
   display: flex;
   column-gap: 2rem;
-  list-style: none;
 }
 
 /* MAIN PAGE */
