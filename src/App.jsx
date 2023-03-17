@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from './pages/Home';
 import Welcome from './pages/Welcome';
 
@@ -10,13 +11,16 @@ function App() {
   }
 
   return (
-    <>
-      {
-        isWelcomeShown ?
-        <Welcome onClick={toggleWelcomeScreen} /> : 
-        <Home />
-      }
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        {/* {
+          isWelcomeShown ?
+          <Welcome onClick={toggleWelcomeScreen} /> : 
+          <Home />
+        } */}
+      </Routes>
+    </BrowserRouter>
   )
 }
 
