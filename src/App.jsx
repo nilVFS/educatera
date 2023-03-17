@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Home from './pages/Home';
 import Welcome from './pages/Welcome';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       {
         isWelcomeShown ?
         <Welcome onClick={toggleWelcomeScreen} /> : 
-        ""
+        <Home />
       }
     </>
   )
