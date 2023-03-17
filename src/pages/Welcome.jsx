@@ -1,10 +1,9 @@
-export default function Welcome(props) {
+import { Link } from "react-router-dom"
+
+export default function Welcome() {
   return (
     <div id="welcome">
-        <h1 
-        className="welcome-title"
-        onClick={props.onClick}
-        >EDUCATERA</h1>
+        <Link className="welcome-title" to="/home">EDUCATERA</Link>
     </div>
   )
 }
