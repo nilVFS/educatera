@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 @font-face {
   font-family: "Atomed";
   src: url("/fonts/Atomed.otf");
@@ -11,10 +13,13 @@
 
 :root {
   --bg-color: #ececec;
+  --primary-color: #765ac0;
+  --secondary-color: #c4cbe4;
 }
 
 body {
   background-color: var(--bg-color);
+  font-family: "Roboto", sans-serif;
 }
 
 /* WELCOME PAGE */
@@ -29,7 +34,7 @@ body {
 .welcome-title {
   font-family: "Atomed", sans-serif;
   font-size: 400%;
-  background: -webkit-linear-gradient(-45deg, #c4cbe4, #765ac0 );
+  background: -webkit-linear-gradient(-45deg, var(--secondary-color), var(--primary-color) );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -47,7 +52,8 @@ body {
   height: 100%;
   left: 0;
   right: 0;
-  animation: wave 12s linear 0s infinite;
+  -webkit-animation: wave 12s linear 0s infinite;
+          animation: wave 12s linear 0s infinite;
 }
 
 .welcome-title::after {
@@ -60,7 +66,18 @@ body {
   left: 0;
   top: 0;
   z-index: -1;
-  animation: wave 12s linear -6s infinite;
+  -webkit-animation: wave 12s linear -6s infinite;
+          animation: wave 12s linear -6s infinite;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 3;
+    box-shadow: none;
+  }
 }
 
 @keyframes wave {
@@ -78,7 +95,9 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   padding-inline: 2rem;
+  box-shadow: 0 0.1rem .25em var(--primary-color);
 }
 
 header a {
@@ -86,9 +105,23 @@ header a {
   color: inherit;
 }
 
+.site-logo {
+  font-family: "Atomed", sans-serif;
+  font-size: 2rem;
+  background: -webkit-linear-gradient(-45deg, var(--secondary-color), var(--primary-color) );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-block: 1rem;
+}
+
+/* NAVIGATION */
+
 nav {
   display: flex;
-  column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  font-size: 1.25rem;
 }
 
 /* MAIN PAGE */
